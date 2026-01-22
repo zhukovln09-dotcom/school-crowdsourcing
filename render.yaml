@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: school-crowdsourcing
+    env: static
+    buildCommand: ""
+    startCommand: "npx serve -s ."
+    staticPublishPath: .
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
