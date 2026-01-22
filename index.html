@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умная школа - Краудсорсинг платформа</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+</head>
+<body>
+    <!-- Навигация будет добавлена через JS -->
+    <header id="main-header"></header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Краудсорсинг для школы</h1>
+                <p>Совместно решаем задачи, создаем проекты, улучшаем школу!</p>
+                <div class="hero-buttons">
+                    <button id="create-project-btn" class="btn-primary">Создать проект</button>
+                    <button id="explore-projects-btn" class="btn-secondary">Исследовать</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="container">
+                <h2>Как это работает?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Предложи идею</h3>
+                        <p>Есть идея для улучшения школы? Поделись ею!</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Собери команду</h3>
+                        <p>Найди единомышленников среди учеников и учителей</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Реализуй проект</h3>
+                        <p>Распредели задачи и работай вместе</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Получи признание</h3>
+                        <p>Лучшие проекты получат поддержку школы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Активные проекты</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="educational">Образование</button>
+                        <button class="filter-btn" data-filter="infrastructure">Инфраструктура</button>
+                        <button class="filter-btn" data-filter="events">Мероприятия</button>
+                        <button class="filter-btn" data-filter="eco">Экология</button>
+                    </div>
+                </div>
+                <div id="projects-container" class="projects-grid">
+                    <!-- Проекты будут загружены через JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Модальные окна -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="auth-forms">
+                <!-- Формы будут добавлены через JS -->
+            </div>
+        </div>
+    </div>
+    
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="project-form">
+                <!-- Форма создания проекта будет здесь -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Школьная краудсорсинг платформа &copy; 2024</p>
+            <p>Для учеников и учителей</p>
+        </div>
+    </footer>
+    
+    <!-- Импорт JavaScript файлов -->
+    <script src="firebase/firebase-config.js"></script>
+    <script src="firebase/firebase-services.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/project-card.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="services/auth-service.js"></script>
+    <script src="services/storage-service.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
