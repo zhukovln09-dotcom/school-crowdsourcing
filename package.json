@@ -1,0 +1,14 @@
+{
+  "name": "school-crowdsourcing",
+  "version": "1.0.0",
+  "description": "Краудсорсинг платформа для школы",
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
